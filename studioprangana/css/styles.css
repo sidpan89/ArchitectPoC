@@ -1,0 +1,112 @@
+/* Core Styles */
+body {
+    background-color: #0a0a0a;
+    color: #e5e5e5;
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+}
+
+a {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Barba.js Transition Helpers */
+.barba-leave-active,
+.barba-enter-active {
+    transition: opacity 0.5s;
+}
+.barba-leave-to,
+.barba-enter-from {
+    opacity: 0;
+}
+
+/* Animation mask reveal classes */
+.animate-mask {
+    overflow: hidden;
+}
+
+.animate-target {
+    transform: translateY(110%);
+}
+
+/* Layout */
+main {
+    width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#liquid-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 5vw;
+    z-index: 10;
+}
+
+.featured-work, .project-grid, .project-hero, .project-info, .project-gallery, .about-content, .contact-content {
+    padding: 5rem 10%;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2rem;
+}
+
+.grid.two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.project-card, .gallery-image {
+    background-color: #222;
+    min-height: 300px;
+}
